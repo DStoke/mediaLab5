@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title> 1 LD </title>
+  <link href="https://unpkg.com/video.js@6.7.1/dist/video-js.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js@6.7.1/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming@0.9.0/dist/videojs-http-streaming.js"></script>
+</head>
+  <!--
+  Embed needed js libraries for video player. Note, libraries needs to be hosted on your server, under /js folder.
+   -->
+  <!--
+  Location for CSS if needed. Note, cascade style sheets needs to be hosted on your server, under /css folder.
+  -->
+  
+<body>
+
+  <h1>Vaizdo įrašų grotuvas</h1>
+  
+  <!--
+  location for your player window
+  -->
+  
+<video-js 
+id="video1" 
+class="vjs-default-skin" 
+data-setup='{ "playbackRates": [0.5, 1, 1.5, 5] }'
+controls preload="auto" width="666" height="333">
+    <source src="https://www.quirksmode.org/html5/videos/big_buck_bunny.mp4"
+      type="video/mp4">
+  </video-js>
+
+
+  <script> 
+  var VideIrasas = videojs('video1');
+    function PlayF() { 
+   VideIrasas.play();
+}
+    function PauseF() { 
+   VideIrasas.pause();
+}
+    function StopF(){
+   VideIrasas.pause();
+   VideIrasas.currentTime(0);   
+     }
+	 
+	function ForwardF(){
+	 VideIrasas.currentTime(VideIrasas.currentTime() + 3);
+	 }
+	 
+	 function BackwardF(){
+	 VideIrasas.currentTime(VideIrasas.currentTime() - 3);
+	 }
+	 
+</script> 
+
+    <button type="button" onclick="PlayF()">Play</button>
+	<button type="button" onclick="PauseF()">Pause</button>
+	<button type="button" onclick="StopF()">Stop</button>
+	<button type="button" onclick="ForwardF()">Jump to 3 sec forward</button>
+	<button type="button" onclick="BackwardF()">Jump to 3 sec backwards</button>	
+
+	
+	
+	<p>Playlist</p>
+	
+	<input type="text" name="url1" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"><button type="button">Load</button><br>
+	<input type="text" name="url2" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"><button type="button">Load</button><br>
+	<button type="button">Shuffle</button>
+  
+  </body>
+</html>

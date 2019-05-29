@@ -1,36 +1,22 @@
-# mediaLab5
+# mediaLab1
 
-This lab aims to build video streaming app based on WebRTC framework.
+updated A-frame version
 
-Some good examples:
-https://www.scaledrone.com/blog/webrtc-tutorial-simple-video-chat/
+This lab aims to build your first HTML5 live stream (HLS) player.
 
-
-# Place all laboratory on the github.io.
-  - ROOT folder should contain 5 folders (lab1, lab2, lab3, lab4 & lab5) and index.html.
-  - index.html should have links to each folder.
-  - Each folder should be prepared to load solution.
+There are many open source alternatives. You can try to use as Video.js player as a startup: https://github.com/videojs/video.js
+or try a live example: https://jsbin.com/gejugat/edit?html,output
 
 # Requirements for repository
   - You have to clone this repository and make two branches (master and develop).
-  - The develop branch should contain commits of every new feature of the AR application.
+  - The develop branch should contain commits of every new feature of the player.
   - When all features will be ready you have to merge the development branch to the master.
 
-# Requirements for streaming application
-There are two options to choose from. 
-
-Option A:
-  - Capture images from camera by using WebRTC API. Basic code for chat application is provided.
-  - By using RTCPeerConnection send images from camera to the client and display them.
-  - You can use base64 to encode image to string and decode on client side.
-  
-Option B:
-  - Find out how WebRTC API is designed.
-  - Create client and server pages.
-  - Server page should capture video from browser.
-  - Client page should display stream. 
-  
-  
-The general requirements for option A & B.
-  - Test application on at least two browsers and specify in README.md which version and browser it was.
-  - To pass this lab, you have to fully complete an option.  
+# Requirements for player
+  - You have to find an HLS player and embed it into index.html file.
+  - The player should be able to run "Big Bunny" video from this URL: https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8
+  - If player fails to play "Big Bunny" try this stream: https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8
+  - Implement at least three features in the index.html (Play, Pause, Stop, Jump to 5 sec forward, Jump to 5 sec backward, Playlist, Shuffle).
+  - Test player on at least two browsers and specify in README.md which version and browser it was.
+  - Additional features are welcome and bonuses are available.
+  - To pass this lab, you have to complete at least two points from the requirement list.
